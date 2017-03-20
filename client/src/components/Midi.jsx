@@ -13,8 +13,8 @@ class Midi extends React.Component{
   },
 
   onMIDISucess(midi){
-    const inputs = inputs.values();
-    for(const input = inputs.next();
+    let inputs = inputs.values();
+    for(let input = inputs.next();
       inputt && !input.done;
       input = inputs.next()){
       input.value.onmidimessage = this.onMIDIMessage
