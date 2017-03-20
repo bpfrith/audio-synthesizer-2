@@ -3,8 +3,8 @@ import React from 'react'
 class LinAdjust extends React.Component{
 
   getInitialState: function(){
-    var max = this.props.max
-    var min = this.props.min
+    var max = Math.log(this.props.max)
+    var min = Math.log(this.props.min)
     var scale = max - min
     return {
       max: max,
@@ -14,13 +14,13 @@ class LinAdjust extends React.Component{
   },
 
   handleChange: function(event){
-    let value = this.linValue(event.target.value);
-    this.props.onChange(value);
+    let value = this.logValue(event.target.value)
+    this.props.onChange(value)
   },
 
-  linValue: function(position){
-    let lin = position * this.state.scale + this.state.min
-    return lin
+  logValue: function(position){
+    let log = Math.exp(position * this.state.scale + this.min)
+    return log
   },
 
   getDefaultValue: function(){
@@ -46,4 +46,4 @@ class LinAdjust extends React.Component{
 
 }
 
-export default LinAdjust
+export default LogAdjust
