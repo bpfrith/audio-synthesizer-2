@@ -1,0 +1,26 @@
+{
+  "name": "audio_synth_2",
+  "version": "1.0.0",
+  "description": "audio_synthesiser",
+  "main": "server.js",
+  "scripts": {
+    "test": "n/a",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "n/a"
+  },
+  "keywords": [
+    "n/a"
+  ],
+  "author": "bpfrith",
+  "license": "ISC",
+  "bugs": {
+    "url": "n/a"
+  },
+  "homepage": "n/a",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
