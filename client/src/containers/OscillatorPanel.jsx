@@ -2,7 +2,7 @@ import React from 'react'
 
 import LinAdjust from '../components/LinAdjust'
 
-class OscillatorPannel extends React.Component{
+class OscillatorPanel extends React.Component{
 
   handleDetuneChange(newDetune){
     this.props.onChange({vcoDeturn: newDetune})
@@ -23,4 +23,4 @@ class OscillatorPannel extends React.Component{
 
 }
 
-export default OscillatorPannel
+export default OscillatorPanel
