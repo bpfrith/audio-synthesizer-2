@@ -26,7 +26,7 @@ class Oscillator extends React.Component{
 
   setDetune(cents, time){
     if(!time) time = this.context.currentTime
-    this.oscillators[0].detune.setValueAtTime(cent, time);
+    this.oscillators[0].detune.setValueAtTime(cents, time);
   }
 
   connect (object){
@@ -35,7 +35,7 @@ class Oscillator extends React.Component{
 
   start(time){
     if(!time) time = this.context.currentTime
-    this.oscillators.forEarch(osc => osc.start(time))
+    this.oscillators.forEach(osc => osc.start(time))
   }
 
   render(){

@@ -5,7 +5,7 @@ import SynthContainer from './containers/SynthContainer'
 
 window.onload = function(){
   ReactDOM.render(
-    <SynthContainer/>
+    <SynthContainer/>,
     document.getElementById('app')
   )
 }

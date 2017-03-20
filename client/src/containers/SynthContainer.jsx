@@ -6,7 +6,7 @@ import OscillatorPanel from './OscillatorPanel'
 import Midi from '../components/Midi'
 import Synth from '../components/Synth'
 
-class SynthContainer extends React.Component{
+var SynthContainer = React.createClass({
 
   getInitialState(){
     return {
@@ -21,7 +21,7 @@ class SynthContainer extends React.Component{
   },
 
   handleChange(datum){
-    this.setState(datum);
+    this.setState(datum)
   },
 
   handleMidiMessage(data){
@@ -39,9 +39,10 @@ class SynthContainer extends React.Component{
     })
   },
 
+
   render(){
     return (
-      <div classname = "Synth">
+      <div className = "Synth">
         <Midi onMessage = {this.handleMidiMessage} />
         <OscillatorPanel detune = {this.state.vcoDetune} onChange = {this.handleChange} />
         <Filter
@@ -55,6 +56,6 @@ class SynthContainer extends React.Component{
     )
   }
 
-}
+})
 
-export default OscillatorPannel
+export default SynthContainer

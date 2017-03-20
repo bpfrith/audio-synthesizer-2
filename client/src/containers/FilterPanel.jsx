@@ -7,7 +7,7 @@ class FilterPanel extends React.Component{
 
   handleDecayChange(newDecay){
     this.props.onChange({envDecay: newDecay})
-  },
+  }
 
   render(){
     return (

@@ -1,11 +1,11 @@
 import React from 'react'
 
-class LinAdjust extends React.Component{
+var LinAdjust = React.createClass({
 
-  getInitialState: function(){
-    var max = this.props.max
-    var min = this.props.min
-    var scale = max - min
+  getInitialState: function() {
+    var max = this.props.max;
+    var min = this.props.min;
+    var scale = max - min;
     return {
       max: max,
       min: min,
@@ -24,11 +24,11 @@ class LinAdjust extends React.Component{
   },
 
   getDefaultValue: function(){
-    let vale = (this.props.default - this.state.min) / this.state.scale
+    let value = (this.props.default - this.state.min) / this.state.scale
     return value
   },
 
-  render function(){
+  render: function(){
     let label = <label>{this.props.name}</label>
     let slider = <input
     type = "range"
@@ -37,13 +37,13 @@ class LinAdjust extends React.Component{
     max = {1}
     step = {1 / 256}
     defaultValue = {this.getDefaultValue()}
-    onChange = {this.handleChange}/>
+    onChange = {this.handleChange} />
 
     return(
       <div className = "adjust">{label}{slider}</div>
     )
   }
 
-}
+})
 
 export default LinAdjust

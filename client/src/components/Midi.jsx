@@ -1,21 +1,21 @@
 import React from 'react'
 
-class Midi extends React.Component{
+var Midi = React.createClass({
 
   componentDidMount(){
     if(navigator.requestMIDIAccess){
       navigator.requestMIDIAccess({
         sysex: false
-      }).then(onMIDISucess, this.onMIDIFailure);
+      }).then(this.onMIDISuccess, this.onMIDIFailure);
     }else{
       alert("No MIDI support.")
     }
   },
 
-  onMIDISucess(midi){
-    let inputs = inputs.values();
+  onMIDISuccess(midi){
+    let inputs = midi.inputs.values()
     for(let input = inputs.next();
-      inputt && !input.done;
+      input && !input.done;
       input = inputs.next()){
       input.value.onmidimessage = this.onMIDIMessage
     }
@@ -33,6 +33,6 @@ class Midi extends React.Component{
     return null;
   }
 
-}
+})
 
-export defult Midi
+export default Midi

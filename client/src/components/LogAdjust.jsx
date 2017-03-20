@@ -1,6 +1,6 @@
 import React from 'react'
 
-class LinAdjust extends React.Component{
+var LogAdjust = React.createClass({
 
   getInitialState: function(){
     var max = Math.log(this.props.max)
@@ -24,11 +24,11 @@ class LinAdjust extends React.Component{
   },
 
   getDefaultValue: function(){
-    let vale = (this.props.default - this.state.min) / this.state.scale
+    let value = (this.props.default - this.state.min) / this.state.scale
     return value
   },
 
-  render function(){
+  render: function(){
     let label = <label>{this.props.name}</label>
     let slider = <input
     type = "range"
@@ -44,6 +44,6 @@ class LinAdjust extends React.Component{
     )
   }
 
-}
+})
 
 export default LogAdjust

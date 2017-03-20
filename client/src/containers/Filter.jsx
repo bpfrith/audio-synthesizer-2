@@ -6,8 +6,12 @@ import LogAdjust from '../components/LogAdjust'
 class Filter extends React.Component{
 
   handleCutoffChange(newFreq){
+    this.props.onChange({vcfCutoff: newFreq})
+  }
+
+  handleResonanceChange(newRes){
     this.props.onChange({vcfResonance: newRes})
-  },
+  }
 
   render(){
     return (
