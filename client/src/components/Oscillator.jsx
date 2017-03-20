@@ -5,17 +5,43 @@ class Oscillator extends React.Component{
   constructor(context){
     super(context)
     this.context = context
-    this.oscillator = []
+    this.oscillators = []
     this.addOscillators(2)
   }
 
   addOscillators(num){
     if(num < 1) return
-      this.oscillator.push(this.context.createOscillator())
-      this.addOscillators(num - 1)
+      this.oscillators.push(this.context.createOscillator())
+    this.addOscillators(num - 1)
   }
 
   setWaveform(waveform){
-    this.oscillator.forEach(osc => osc.type = waveform)
+    this.oscillators.forEach(osc => osc.type = waveform)
   }
+
+  setFrequency(freq, time){
+    if(!time) time = this.context.currentTime
+    this.oscillators.forEach(osc => osc.frequency.setValueAtTime(freq, time))
+  }
+
+  setDetune(cents, time){
+    if(!time) time = this.context.currentTime
+    this.oscillators[0].detune.setValueAtTime(cent, time);
+  }
+
+  connect (object){
+    this.oscillators.forEach(osc => osc.connect(object))
+  }
+
+  start(time){
+    if(!time) time = this.context.currentTime
+    this.oscillators.forEarch(osc => osc.start(time))
+  }
+
+  render(){
+    return null
+  }
+  
 }
+
+export default Oscillator
