@@ -1,6 +1,6 @@
 import React from 'react'
 
-var Oscillator = require('./Oscillator')
+import Oscillator from './Oscillator'
 
 class Synth extends React.Component{
 
