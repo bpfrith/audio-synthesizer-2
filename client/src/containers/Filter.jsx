@@ -3,7 +3,7 @@ import React from 'react'
 import LinAdjust from '../components/LinAdjust'
 import LogAdjust from '../components/LogAdjust'
 
-class LinAdjust extends React.Component{
+class Filter extends React.Component{
 
   handleCutoffChange(newFreq){
     this.props.onChange({vcfResonance: newRes})
