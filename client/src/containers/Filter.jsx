@@ -29,7 +29,7 @@ class Filter extends React.Component{
           onChange = {this.handleCutoffChange}
           default = {this.props.cutoff}/>
         <LogAdjust
-        name = 'Res'
+        name = 'Resonance'
         min = {1}
         max = {30}
         onChange = {this.handleResonanceChange}

@@ -40,7 +40,7 @@ var LinAdjust = React.createClass({
     onChange = {this.handleChange} />
 
     return(
-      <div className = "adjust">{label}{slider}</div>
+      <div className = "adjust">{slider}{label}</div>
     )
   }
 

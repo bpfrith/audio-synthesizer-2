@@ -30,7 +30,8 @@ var LogAdjust = React.createClass({
 
   render: function(){
     let label = <label>{this.props.name}</label>
-    let slider = <input type = "range"
+    let slider = <input
+    type = "range"
     id = {this.props.name}
     min = {0}
     max = {1}
@@ -39,7 +40,7 @@ var LogAdjust = React.createClass({
     onChange = {this.handleChange}/>
 
     return(
-      <div className = "adjust">{label}{slider}</div>
+      <div className = "adjust">{slider}{label}</div>
     )
   }
 
