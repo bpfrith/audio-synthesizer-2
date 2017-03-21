@@ -2,16 +2,15 @@ import React from 'react'
 
 class Oscillator extends React.Component{
 
-  constructor(context){
-    super(context)
-    this.context = context
+  constructor(props){
+    super(props)
     this.oscillators = []
     this.addOscillators(2)
   }
 
   addOscillators(num){
     if(num < 1) return
-      this.oscillators.push(this.context.createOscillator())
+      this.oscillators.push(this.props.createOscillator())
     this.addOscillators(num - 1)
   }
 
@@ -20,12 +19,12 @@ class Oscillator extends React.Component{
   }
 
   setFrequency(freq, time){
-    if(!time) time = this.context.currentTime
+    if(!time) time = this.props.currentTime
     this.oscillators.forEach(osc => osc.frequency.setValueAtTime(freq, time))
   }
 
   setDetune(cents, time){
-    if(!time) time = this.context.currentTime
+    if(!time) time = this.props.currentTime
     this.oscillators[0].detune.setValueAtTime(cents, time);
   }
 
@@ -34,7 +33,7 @@ class Oscillator extends React.Component{
   }
 
   start(time){
-    if(!time) time = this.context.currentTime
+    if(!time) time = this.props.currentTime
     this.oscillators.forEach(osc => osc.start(time))
   }
 

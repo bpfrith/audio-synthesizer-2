@@ -51,7 +51,7 @@ var SynthContainer = React.createClass({
         <Filter
           cutoff = {this.state.vcfDetune}
           resonance = {this.state.vcfResonance}
-          onChange = {this.handleChagne} />
+          onChange = {this.handleChange} />
         <FilterPanel
           decay = {this.state.envDecay}
           onChange = {this.handleChange} />

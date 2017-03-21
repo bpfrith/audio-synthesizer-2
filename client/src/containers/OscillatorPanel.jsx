@@ -5,6 +5,11 @@ import Synth from '../components/Synth'
 
 class OscillatorPanel extends React.Component{
 
+  constructor(props){
+    super(props)
+    this.handleDetuneChange = this.handleDetuneChange.bind(this)
+  }
+
   handleDetuneChange(newDetune){
     this.props.onChange({vcoDetune: newDetune})
   }

@@ -5,6 +5,11 @@ import LogAdjust from '../components/LogAdjust'
 
 class FilterPanel extends React.Component{
 
+  constructor(props){
+    super(props)
+    this.handleDecayChange = this.handleDecayChange.bind(this)
+  }
+
   handleDecayChange(newDecay){
     this.props.onChange({envDecay: newDecay})
   }
