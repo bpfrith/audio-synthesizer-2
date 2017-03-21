@@ -44,9 +44,10 @@ var Synth = React.createClass({
 
   componentWillReceiveProps(nextProps){
     let event = this.state.context.currentTime
-    this.updateOscillator(nextProps.params.event);
-    this.updateNote(nextProps.params,event)
-    this.updateFilter(nextProprs.params, event)
+    this.updateOscillator(nextProps.params, event)
+    this.updateNote(nextProps.params, event)
+    this.updateFilter(nextProps.params, event)
+    this.updateAmp(nextProps.params, event)
   },
 
   updateOscillator(params, event){
@@ -56,11 +57,12 @@ var Synth = React.createClass({
   updateNote(params, event){
     let lastNotePlayed = params.notes[params.notes.length-1]
     let noteFrequency = this.midiNoteToHz(lastNotePlayed)
-    this.state.osc.setFrequency(noteFreqency || 0)
+    this.state.osc.setFrequency(noteFrequency || 0)
   },
 
   updateFilter(params, event){
-    this.state.lpf.frequency.setValueAtTime(params.vcfResonance, event)
+    this.state.lpf.frequency.setValueAtTime(params.vcfCutoff, event)
+    this.state.lpf.Q.setValueAtTime(params.vcfCutoff, event)
   },
 
   updateAmp(params, event){

@@ -16,7 +16,6 @@ class Filter extends React.Component{
   }
 
   handleResonanceChange(newRes){
-    console.log(this)
     this.props.onChange({vcfResonance: newRes})
   }
 
