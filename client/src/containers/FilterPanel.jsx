@@ -17,7 +17,7 @@ class FilterPanel extends React.Component{
   render(){
     return (
       <div className = "synthmodule">
-        <logSlider
+        <logAdjust
           name = "Decay"
           min = {0.01}
           max = {10}

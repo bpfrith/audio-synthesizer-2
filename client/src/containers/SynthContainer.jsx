@@ -39,6 +39,16 @@ var SynthContainer = React.createClass({
     })
   },
 
+  handleNoteOff(noteNum){
+    var index = this.state.notes.indexOf(noteNum);
+    var newNotes = this.state.notes.splice(0);
+    newNotes.splice(index, 1);
+    var newLevel = newNotes.length ? 1 : 0
+    this.setState({
+      notes: newNotes,
+      level: newLevel
+    })
+  },
 
   render(){
     return (
