@@ -21,8 +21,8 @@ class FilterPanel extends React.Component{
           name = "Decay"
           min = {0.01}
           max = {10}
-          default = {this.props.decay}
-          onChange = {this.handleDecayChange} />
+          onChange = {this.handleDecayChange}
+          default = {this.props.decay} />
       </div>
     )
   }
