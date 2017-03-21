@@ -30,8 +30,7 @@ var LogAdjust = React.createClass({
 
   render: function(){
     let label = <label>{this.props.name}</label>
-    let slider = <input
-    type = "range"
+    let slider = <input type = "range"
     id = {this.props.name}
     min = {0}
     max = {1}
