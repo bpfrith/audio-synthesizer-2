@@ -17,13 +17,13 @@ class Filter extends React.Component{
     return (
       <div className="synthmodule">
         <LinAdjust
-          name = 'cutoff'
+          name = 'Cutoff'
           min = {20}
           max = {20000}
           onChange = {this.handleCutoffChange}
           default = {this.props.cutoff}/>
         <LogAdjust
-        name = 'res'
+        name = 'Res'
         min = {1}
         max = {30}
         onChange = {this.handleResonanceChange}

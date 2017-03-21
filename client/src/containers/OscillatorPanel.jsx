@@ -13,7 +13,7 @@ class OscillatorPanel extends React.Component{
     return (
       <div className = "synthmodule">
         <LinAdjust
-        name = "detune"
+        name = "Detune"
         min = {-50}
         max = {50}
         default = {this.props.detune}

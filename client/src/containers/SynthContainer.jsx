@@ -43,15 +43,20 @@ var SynthContainer = React.createClass({
   render(){
     return (
       <div className = "Synth">
-        <Midi onMessage = {this.handleMidiMessage} />
-        <OscillatorPanel detune = {this.state.vcoDetune} onChange = {this.handleChange} />
+        <Midi
+          onMessage = {this.handleMidiMessage} />
+        <OscillatorPanel
+          detune = {this.state.vcoDetune}
+          onChange = {this.handleChange} />
         <Filter
           cutoff = {this.state.vcfDetune}
+          resonance = {this.state.vcfResonance}
           onChange = {this.handleChagne} />
         <FilterPanel
           decay = {this.state.envDecay}
           onChange = {this.handleChange} />
-          <Synth params = {this.state} />
+        <Synth
+          params = {this.state} />
       </div>
     )
   }

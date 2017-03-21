@@ -13,7 +13,7 @@ class FilterPanel extends React.Component{
     return (
       <div className = "synthmodule">
         <logSlider
-          name = "decay"
+          name = "Decay"
           min = {0.01}
           max = {10}
           default = {this.props.decay}
