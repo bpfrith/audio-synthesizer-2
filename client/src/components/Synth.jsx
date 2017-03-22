@@ -97,12 +97,11 @@ var Synth = React.createClass({
 
   render(){
     return null
+    // (
+    // <button onClick={this.buttonClick} />
+    // )
   }
 
 })
 
 export default Synth
-
-// (
-//       <button onClick={this.buttonClick} />
-//     )
