@@ -4,7 +4,7 @@ body {
 
 .Synth {
   margin: 10px;
-  display: inline-block;
+  display: inline-flex;
   padding: 10px 30px;
   background-color: #D9D4CF;
   border-radius: 10px;
