@@ -6,6 +6,8 @@ class Oscillator extends React.Component{
     super(props)
     this.oscillators = []
     this.addOscillators(2)
+
+    console.log(props)
   }
 
   addOscillators(num){
