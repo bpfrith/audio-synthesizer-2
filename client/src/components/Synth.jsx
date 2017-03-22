@@ -73,34 +73,36 @@ var Synth = React.createClass({
     return Math.pow(2, (midiNote - 69)/12) * 440
   },
   //many need to change 261.63 to 440
-  buttonClick() {
-    var audioContext = new window.AudioContext
-    var oscillator = new Oscillator(audioContext)
-    var filter = audioContext.createBiquadFilter()
-    var outputAmp = audioContext.createGain()
+  // buttonClick() {
+  //   var audioContext = new window.AudioContext
+  //   var oscillator = new Oscillator(audioContext)
+  //   var filter = audioContext.createBiquadFilter()
+  //   var outputAmp = audioContext.createGain()
 
-    outputAmp.connect(audioContext.destination)
-    outputAmp.gain.value = this.props.params.level
+  //   outputAmp.connect(audioContext.destination)
+  //   outputAmp.gain.value = this.props.params.level
 
-    filter.connect(outputAmp)
-    filter.type = "lowpass"
-    filter.frequency.value = this.props.params.vcfCutoff
-    filter.Q.value = this.props.params.vcfResonance
+  //   filter.connect(outputAmp)
+  //   filter.type = "lowpass"
+  //   filter.frequency.value = this.props.params.vcfCutoff
+  //   filter.Q.value = this.props.params.vcfResonance
 
-    oscillator.connect(filter)
-    oscillator.setWaveform("sine")
-    oscillator.setFrequency(this.state.frequency || 440)
-    //may need to change to 263 for midi
-    oscillator.setDetune(this.props.params.vcoDetune)
-    oscillator.start(audioContext.currentTime)
-  },
+  //   oscillator.connect(filter)
+  //   oscillator.setWaveform("sine")
+  //   oscillator.setFrequency(this.state.frequency || 440)
+  //   //may need to change to 263 for midi
+  //   oscillator.setDetune(this.props.params.vcoDetune)
+  //   oscillator.start(audioContext.currentTime)
+  // },
 
   render(){
-    return (
-      <button onClick={this.buttonClick} />
-    )
+    return null
   }
 
 })
 
 export default Synth
+
+// (
+//       <button onClick={this.buttonClick} />
+//     )
